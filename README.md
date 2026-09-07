@@ -25,15 +25,15 @@ Kotlin Multiplatform resolves the platform artifact automatically; no `-jvm` / `
 ## Usage
 
 ```kotlin
-import io.github.windedge.num2words.num2words
+import io.github.windedge.num2words.Num2Words
 
-num2words(42)                                    // forty-two
-num2words(1234, lang = "zh")                      // 一千二百三十四
-num2words(150, lang = "ja", to = "currency",
-          options = mapOf("currency" to "JPY"))   // 百五十円
-num2words(2021, lang = "ja", to = "year")         // 令和三年
-num2words(10, lang = "zh", to = "ordinal",
-          options = mapOf("counter" to ""))       // 第十
+Num2Words.convert(42)                                    // forty-two
+Num2Words.convert(1234, lang = "zh")                    // 一千二百三十四
+Num2Words.convert(150, lang = "ja", to = "currency",
+          options = mapOf("currency" to "JPY"))         // 百五十円
+Num2Words.convert(2021, lang = "ja", to = "year")       // 令和三年
+Num2Words.convert(10, lang = "zh", to = "ordinal",
+          options = mapOf("counter" to ""))             // 第十
 ```
 
 `to` accepts `"cardinal"` (default), `"ordinal"`, `"ordinal_num"`, `"year"`, `"currency"`. `lang` accepts the codes below; unknown options in the map are ignored.
