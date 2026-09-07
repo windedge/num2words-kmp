@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.1.2] - 2026-09-07
+
+### Changed
+- JVM artifact now targets Java 17 bytecode instead of 21.
+
 ## [0.1.1] - 2026-09-07
 
 ### Changed

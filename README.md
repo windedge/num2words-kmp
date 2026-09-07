@@ -9,7 +9,7 @@ Targets: JVM, JS, wasmJs, Android (via JVM), Linux, macOS, Windows, iOS. No thir
 ```kotlin
 // version catalog (libs.versions.toml)
 [versions]
-num2words = "0.1.1"
+num2words = "0.1.2"
 
 [libraries]
 num2words = { module = "io.github.windedge.num2words:num2words", version.ref = "num2words" }
@@ -17,7 +17,7 @@ num2words = { module = "io.github.windedge.num2words:num2words", version.ref = "
 
 ```kotlin
 // or directly in build.gradle.kts
-implementation("io.github.windedge.num2words:num2words:0.1.1")
+implementation("io.github.windedge.num2words:num2words:0.1.2")
 ```
 
 Kotlin Multiplatform resolves the platform artifact automatically; no `-jvm` / `-js` suffix needed.
@@ -60,7 +60,7 @@ All errors throw `Num2WordsException` subtypes: `Num2WordsOverflowError` (exceed
 ## Compatibility
 
 - Built with Kotlin 2.1.20; consumers need Kotlin 2.1 or newer (Kotlin metadata is not readable by older compilers).
-- JVM artifact is Java 21 bytecode: running it needs JRE 21+. Build itself uses a JDK 21 toolchain.
+- JVM artifact is Java 17 bytecode: running it needs JRE 17+. Build itself uses a JDK 21 toolchain.
 - JS / wasmJs artifacts use no Node or DOM APIs, so they run in browsers and Node.js alike (tests run on Node).
 - Native artifacts (Linux/macOS/Windows/iOS) are consumed through the usual KMP dependency; building Apple targets yourself needs Xcode.
 
