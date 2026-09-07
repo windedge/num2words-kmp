@@ -59,10 +59,9 @@ All errors throw `Num2WordsException` subtypes: `Num2WordsOverflowError` (exceed
 
 ## Compatibility
 
-- Built with Kotlin 2.1.20; consumers need Kotlin 2.1 or newer (Kotlin metadata is not readable by older compilers).
-- JVM artifact is Java 17 bytecode: running it needs JRE 17+. Build itself uses a JDK 21 toolchain.
-- JS / wasmJs artifacts use no Node or DOM APIs, so they run in browsers and Node.js alike (tests run on Node).
-- Native artifacts (Linux/macOS/Windows/iOS) are consumed through the usual KMP dependency; building Apple targets yourself needs Xcode.
+- Kotlin 2.1+ (both build and consumer)
+- JVM artifact is Java 17 bytecode, needs JRE 17+ at runtime
+- JS / wasmJs: no Node or DOM dependencies, runs in browsers and Node; native targets via standard KMP dependency
 
 ## Development
 
