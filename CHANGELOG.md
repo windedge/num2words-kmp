@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-09-07
+
+### Changed
+- Renamed Maven artifact from `io.github.windedge.num2words:num2words-kmp` to `io.github.windedge.num2words:num2words`.
+
 ## [0.1.0] - 2026-04-27
 
 ### Added

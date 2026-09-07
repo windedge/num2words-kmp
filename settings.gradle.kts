@@ -13,4 +13,4 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "num2words-kmp"
+rootProject.name = "num2words"
