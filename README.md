@@ -57,6 +57,13 @@ num2words(10, lang = "zh", to = "ordinal",
 
 All errors throw `Num2WordsException` subtypes: `Num2WordsOverflowError` (exceeds `MAXVAL`), `Num2WordsValueError` (bad input), `Num2WordsNotImplemented` (unsupported language/currency, e.g. decimals for JPY).
 
+## Compatibility
+
+- Built with Kotlin 2.1.20; consumers need Kotlin 2.1 or newer (Kotlin metadata is not readable by older compilers).
+- JVM artifact is Java 21 bytecode: running it needs JRE 21+. Build itself uses a JDK 21 toolchain.
+- JS / wasmJs artifacts use no Node or DOM APIs, so they run in browsers and Node.js alike (tests run on Node).
+- Native artifacts (Linux/macOS/Windows/iOS) are consumed through the usual KMP dependency; building Apple targets yourself needs Xcode.
+
 ## Development
 
 ```bash
